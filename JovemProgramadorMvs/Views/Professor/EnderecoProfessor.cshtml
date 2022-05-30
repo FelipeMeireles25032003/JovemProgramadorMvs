@@ -1,0 +1,31 @@
+﻿@model EnderecoModel
+
+<form asp-action="">
+    <div class="mb-3">
+        <label for="inputnome" class="form-label">Lougradouro</label>
+        <input type="text" class="form-control col-md-6" asp-for="logradouro">
+    </div>
+    <div class="mb-3">
+        <label for="inputidade" class="form-label">Complemento</label>
+        <input type="text" class="form-control col-md-4" asp-for="complemento">
+    </div>
+    <div class="mb-3">
+        <label for="inputemail" class="form-label">Bairro</label>
+        <input type="email" class="form-control col-md-6" asp-for="bairro">
+    </div>
+    <div class="mb-3">
+        <label for="inputcontato" class="form-label">Localidade</label>
+        <input type="text" class="form-control col-md-4" asp-for="localidade">
+    </div>
+    <div class="mb-3">
+        <label for="inputcep" class="form-label">Uf</label>
+        <input type="text" class="form-control col-md-2" asp-for="uf">
+    </div>
+    <div class="mb-3">
+        <label for="inputcep" class="form-label">DDD</label>
+        <input type="text" class="form-control col-md-2" asp-for="ddd">
+    </div>
+    <div class="text-center">
+        <a class="btn btn-secondary col-md-1" role="button" asp-controller="Professor" asp-action="Index">Voltar</a>
+    </div>
+</form>

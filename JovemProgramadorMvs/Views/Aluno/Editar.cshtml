@@ -1,0 +1,38 @@
+﻿@model AlunoModel
+
+@if (TempData["Mensagem2"] != null)
+{
+    <div class="alert-success">
+        @TempData["Mensagem2"]
+    </div>
+}
+
+<form asp-controller="Aluno" asp-action="Atualizar" method="post">
+
+    <input type ="hidden" asp-for="Id"/>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control col-md-6" required>
+    </div>
+    <div class="mb-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="number" asp-for="Idade" class="form-control col-md-1" aria-describedby="idade">
+    </div>
+    <div class="mb-3">
+        <label for="contato" class="form-label">Contato</label>
+        <input type="text" asp-for="Contato" class="form-control col-md-4" placeholder="(XX)XXXX-XXXX">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control col-md-5" aria-describedby="email" placeholder="jovemprogramador@gmail.com">
+    </div>
+    <div class="mb-3">
+        <label for="cep" class="form-label">Cep</label>
+        <input type="text" asp-for="Cep" class="form-control col-md-3" placeholder="XXXXX-XXX">
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary col-md-1" role="button">Atualizar</button>
+        <a class="btn btn-secondary col-md-1" role="button" asp-controller="Aluno" asp-action="Index">Voltar</a>
+    </div>
+</form>

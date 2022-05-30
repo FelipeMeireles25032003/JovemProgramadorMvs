@@ -1,0 +1,26 @@
+﻿<form asp-action="">
+    <div class="mb-3">
+        <label for="inputnome" class="form-label">Nome</label>
+        <input type="text" class="form-control col-md-6" required>
+    </div>
+    <div class="mb-3">
+        <label for="inputidade" class="form-label">Idade</label>
+        <input type="number" class="form-control col-md-1">
+    </div>
+    <div class="mb-3">
+        <label for="inputemail" class="form-label">Email</label>
+        <input type="email" class="form-control col-md-5" aria-describedby="email" placeholder="professorprogramador@gmail.com">
+    </div>
+    <div class="mb-3">
+        <label for="inputcontato" class="form-label">Contato</label>
+        <input type="text" class="form-control col-md-4" placeholder="(XX)XXXX-XXXX">
+    </div>
+    <div class="mb-3">
+        <label for="inputcep" class="form-label">Cep</label>
+        <input type="text" class="form-control col-md-3" placeholder="XXXXX-XXX">
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary col-md-1" role="button" asp-controller="Professor" asp-action="MensagensProfessor">Adicionar</button>
+        <a class="btn btn-secondary col-md-1" role="button" asp-controller="Professor" asp-action="Index">Voltar</a>
+    </div>
+</form>
