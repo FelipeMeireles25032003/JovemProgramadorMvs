@@ -10,18 +10,19 @@ namespace JovemProgramadorMvs.Data.Mapeamento
 {
     public class EnderecoMapeamento: IEntityTypeConfiguration<EnderecoModel>
     {
-        public void Configure(EntityTypeBuilder<AlunoModel> builder)
+        public void Configure(EntityTypeBuilder<EnderecoModel> builder)
         {
             builder.ToTable("EnderecoAluno");
 
             builder.HasKey(t => t.Id);
-            builder.HasKey(t => t.IdAluno);
 
-            builder.Property(t => t.Nome).HasColumnType("varchar(50)");
-            builder.Property(t => t.Idade).HasColumnType("int");
-            builder.Property(t => t.Contato).HasColumnType("varchar(15)");
-            builder.Property(t => t.Email).HasColumnType("varchar(50)");
-            builder.Property(t => t.Cep).HasColumnType("varchar(10)");
+            builder.Property(t => t.IdAluno).HasColumnType("int");
+            builder.Property(t => t.logradouro).HasColumnType("varchar(50)");
+            builder.Property(t => t.complemento).HasColumnType("int");
+            builder.Property(t => t.bairro).HasColumnType("varchar(15)");
+            builder.Property(t => t.localidade).HasColumnType("varchar(50)");
+            builder.Property(t => t.uf).HasColumnType("varchar(10)");
+            builder.Property(t => t.ddd).HasColumnType("varchar(3)");
         }
 
     }
